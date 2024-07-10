@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/kemitraan",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Kemitraan\\": "app/",
+            "Modules\\Kemitraan\\Database\\Factories\\": "database/factories/",
+            "Modules\\Kemitraan\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Kemitraan\\Tests\\": "tests/"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/kewirausahaan",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Kewirausahaan\\": "app/",
+            "Modules\\Kewirausahaan\\Database\\Factories\\": "database/factories/",
+            "Modules\\Kewirausahaan\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Kewirausahaan\\Tests\\": "tests/"
+        }
+    }
+}

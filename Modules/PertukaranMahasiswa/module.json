@@ -1,0 +1,11 @@
+{
+    "name": "PertukaranMahasiswa",
+    "alias": "pertukaranmahasiswa",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\PertukaranMahasiswa\\Providers\\PertukaranMahasiswaServiceProvider"
+    ],
+    "files": []
+}

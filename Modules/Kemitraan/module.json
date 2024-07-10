@@ -1,0 +1,11 @@
+{
+    "name": "Kemitraan",
+    "alias": "kemitraan",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Kemitraan\\Providers\\KemitraanServiceProvider"
+    ],
+    "files": []
+}

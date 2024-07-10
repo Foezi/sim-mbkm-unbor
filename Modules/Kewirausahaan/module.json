@@ -1,0 +1,11 @@
+{
+    "name": "Kewirausahaan",
+    "alias": "kewirausahaan",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Kewirausahaan\\Providers\\KewirausahaanServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/magang",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Magang\\": "app/",
+            "Modules\\Magang\\Database\\Factories\\": "database/factories/",
+            "Modules\\Magang\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Magang\\Tests\\": "tests/"
+        }
+    }
+}
