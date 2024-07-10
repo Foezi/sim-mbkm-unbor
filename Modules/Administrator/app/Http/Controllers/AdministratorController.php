@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Log;
 
 class AdministratorController extends Controller
 {
@@ -14,6 +15,15 @@ class AdministratorController extends Controller
      */
     public function index()
     {
+        Log::debug("Test log debug");
+        // Log::notice("Test log notice");
+        // Log::info("Test log info");
+        // Log::alert("Test log alert");
+        // Log::warning("Test log warning");
+        // Log::error("Test log error");
+        // Log::critical("Test log critical");
+        // Log::emergency("Test log emergency");
+
         return view('administrator::index');
     }
 
