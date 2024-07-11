@@ -1,0 +1,54 @@
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.event {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: #007bff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.event::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 7px;
+  width: 1px;
+  height: 100%;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+.event:last-child::before {
+  height: 50%;
+}
+
+.info {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.date {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 1em;
+  font-weight: normal;
+  color: #555;
+}
