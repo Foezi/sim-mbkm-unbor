@@ -15,7 +15,7 @@
                 @csrf
 
                 <div>
-                    <x-button>
+                    <x-button style="background-color: dodgerblue">
                         {{ __('Resend Verification Email') }}
                     </x-button>
                 </div>
@@ -24,7 +24,7 @@
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
 
-                <button type="submit" class="text-sm text-blue-500 underline hover:text-blue-700">
+                <button type="submit" class="text-sm text-blue-500 underline hover:text-blue-700" style="background-color: dodgerblue">
                     {{ __('Log Out') }}
                 </button>
             </form>

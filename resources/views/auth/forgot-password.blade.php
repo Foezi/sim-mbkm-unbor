@@ -41,7 +41,7 @@
                 </div>
 
                 <div>
-                    <x-button class="justify-center w-full">
+                    <x-button class="justify-center w-full" style="background-color: dodgerblue">
                         {{ __('Email Password Reset Link') }}
                     </x-button>
                 </div>

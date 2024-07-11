@@ -1,5 +1,5 @@
 @props([
-    'variant' => 'primary',
+    'variant' => 'info',
     'iconOnly' => false,
     'srText' => '',
     'href' => false,

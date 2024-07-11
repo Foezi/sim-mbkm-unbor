@@ -15,5 +15,5 @@ use Modules\Administrator\Http\Controllers\AdministratorController;
 */
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::resource('/', AdministratorController::class)->names('administrator');
+    Route::resource('/', AdministratorController::class);
 });

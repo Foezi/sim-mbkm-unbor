@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="flex items-center justify-end">
-                    <x-button>
+                    <x-button style="background-color: dodgerblue">
                         {{ __('Reset Password') }}
                     </x-button>
                 </div>

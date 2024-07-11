@@ -4,7 +4,9 @@
         href="{{ route('dashboard') }}"
         class="inline-flex items-center gap-2"
     >
-        <x-application-logo aria-hidden="true" class="w-10 h-auto" />
+        <div align="center">
+            <img src="{{ asset('assets/img/logo/logo-kampus-merdeka.png') }}" style="width: 50%" alt="" srcset="">
+        </div>
 
         <span class="sr-only">Dashboard</span>
     </a>

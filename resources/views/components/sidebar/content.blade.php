@@ -14,10 +14,85 @@
         </x-slot>
     </x-sidebar.link>
 
-    <x-sidebar.dropdown
-        title="Buttons"
-        :active="Str::startsWith(request()->route()->uri(), 'buttons')"
+    <div
+        x-transition
+        x-show="isSidebarOpen || isSidebarHovered"
+        class="text-sm text-gray-500"
     >
+        Kelola Akun Pengguna
+    </div>
+
+    <x-sidebar.link
+        title="Administrator"
+        :active="Str::startsWith(request()->route()->uri(), 'buttons')"
+        href="{{ url('/admin') }}"
+    >
+        <x-slot name="icon">
+            <x-icons.users-manage class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+        </x-slot>
+    </x-sidebar.link>
+
+    <x-sidebar.link
+        title="Mitra"
+        :active="Str::startsWith(request()->route()->uri(), 'buttons')"
+        href="{{ url('/mitra') }}"
+    >
+        <x-slot name="icon">
+            <x-icons.users-manage class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+        </x-slot>
+    </x-sidebar.link>
+
+    <x-sidebar.link
+        title="Mahasiswa"
+        :active="Str::startsWith(request()->route()->uri(), 'buttons')"
+        href="{{ url('/mahasiswa') }}"
+    >
+        <x-slot name="icon">
+            <x-icons.users-manage class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+        </x-slot>
+    </x-sidebar.link>
+
+    <x-sidebar.link
+        title="Kaprodi"
+        :active="Str::startsWith(request()->route()->uri(), 'buttons')"
+        href="{{ url('/kaprodi') }}"
+    >
+        <x-slot name="icon">
+            <x-icons.users-manage class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+        </x-slot>
+    </x-sidebar.link>
+
+    <x-sidebar.link
+        title="Dosen Pembimbing"
+        :active="Str::startsWith(request()->route()->uri(), 'buttons')"
+        href="{{ url('/dospem') }}"
+    >
+        <x-slot name="icon">
+            <x-icons.users-manage class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+        </x-slot>
+    </x-sidebar.link>
+
+    <div
+        x-transition
+        x-show="isSidebarOpen || isSidebarHovered"
+        class="text-sm text-gray-500"
+    >
+        Kelola Sistem
+    </div>
+
+    <x-sidebar.link
+        title="Backup"
+        :active="Str::startsWith(request()->route()->uri(), 'buttons')"
+        href="{{ url('/backup') }}"
+    >
+        <x-slot name="icon">
+            <x-icons.copy class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
+        </x-slot>
+    </x-sidebar.link>
+    
+    {{-- <x-sidebar.dropdown
+        title="Buttons"
+        :active="Str::startsWith(request()->route()->uri(), 'buttons')">
         <x-slot name="icon">
             <x-heroicon-o-view-grid class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
         </x-slot>
@@ -37,22 +112,17 @@
             href="{{ route('buttons.text-icon') }}"
             :active="request()->routeIs('buttons.text-icon')"
         />
-    </x-sidebar.dropdown>
+    </x-sidebar.dropdown> --}}
+    
 
-    <div
-        x-transition
-        x-show="isSidebarOpen || isSidebarHovered"
-        class="text-sm text-gray-500"
-    >
-        Dummy Links
-    </div>
+    
 
-    @php
+    {{-- @php
         $links = array_fill(0, 20, '');
-    @endphp
+    @endphp --}}
 
-    @foreach ($links as $index => $link)
-        <x-sidebar.link title="Dummy link {{ $index + 1 }}" href="#" />
-    @endforeach
+    {{-- @foreach ($links as $index => $link) --}}
+    {{-- @endforeach --}}
+
 
 </x-perfect-scrollbar>
