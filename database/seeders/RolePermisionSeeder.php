@@ -50,7 +50,8 @@ class RolePermisionSeeder extends Seeder
 
         Role::create(['name' => 'su-admin']);
         Role::create(['name' => 'admin']);
-        Role::create(['name' => 'mitra']);
+        Role::create(['name' => 'mitra-pt']);
+        Role::create(['name' => 'mitra-industri']);
         Role::create(['name' => 'kaprodi']);
         Role::create(['name' => 'dospem']);
         Role::create(['name' => 'mahasiswa']);
@@ -76,7 +77,7 @@ class RolePermisionSeeder extends Seeder
         $roleAdmin->givePermissionTo('delete-kaprodi');
         $roleAdmin->givePermissionTo('backup-db');
 
-        $roleAdmin = Role::findByName('mitra');
+        $roleAdmin = Role::findByName('mitra-pt');
         $roleAdmin->givePermissionTo('create-mhs');
         $roleAdmin->givePermissionTo('read-mhs');
         $roleAdmin->givePermissionTo('update-mhs');

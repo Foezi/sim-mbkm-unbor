@@ -58,6 +58,32 @@
                     </x-form.input-with-icon-wrapper>
                 </div>
 
+                <!-- Username -->
+                <div class="space-y-2">
+                    <x-form.label
+                        for="username"
+                        :value="__('Username')"
+                    />
+
+                    <x-form.input-with-icon-wrapper>
+                        <x-slot name="icon">
+                            <x-heroicon-o-user aria-hidden="true" class="w-5 h-5" />
+                        </x-slot>
+
+                        <x-form.input
+                            withicon
+                            id="username"
+                            class="block w-full"
+                            type="text"
+                            name="username"
+                            :value="old('username')"
+                            required
+                            autofocus
+                            placeholder="{{ __('Username') }}"
+                        />
+                    </x-form.input-with-icon-wrapper>
+                </div>
+
                 <!-- Password -->
                 <div class="space-y-2">
                     <x-form.label
@@ -104,6 +130,37 @@
                             required
                             placeholder="{{ __('Confirm Password') }}"
                         />
+                    </x-form.input-with-icon-wrapper>
+                </div>
+
+                <!-- Kategori Pengguna -->
+                <div class="space-y-2">
+                    <x-form.label
+                        for="kategoripengguna"
+                        :value="__('Kategori Pengguna')"
+                    />
+
+                    <x-form.input-with-icon-wrapper>
+                        <x-slot name="icon">
+                            {{-- <x-heroicon-o-user aria-hidden="true" class="w-5 h-5" /> --}}
+                        </x-slot>
+
+                        {{-- <x-form.input
+                            withicon
+                            id="kategoripengguna"
+                            class="block w-full"
+                            type="text"
+                            name="kategoripengguna"
+                            :value="old('kategoripengguna')"
+                            required
+                            autofocus
+                            placeholder="{{ __('Pilih Peran') }}"
+                        /> --}}
+                        <select name="partnerType" class="form-select block w-full rounded-md" aria-label="Default select example">
+                            <option selected>Pilih Peran:</option>
+                            <option value="mitra-pt">Perguruan Tinggi</option>
+                            <option value="mitra-industri">Mitra Industri</option>
+                        </select>
                     </x-form.input-with-icon-wrapper>
                 </div>
 

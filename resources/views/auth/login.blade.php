@@ -10,11 +10,11 @@
             @csrf
 
             <div class="grid gap-6">
-                <!-- Email Address -->
+                <!-- Email Address or Username -->
                 <div class="space-y-2">
                     <x-form.label
-                        for="email"
-                        :value="__('Email')"
+                        for="id_user"
+                        :value="__('Email atau Username')"
                     />
 
                     <x-form.input-with-icon-wrapper>
@@ -24,12 +24,12 @@
 
                         <x-form.input
                             withicon
-                            id="email"
+                            id="id_user"
                             class="block w-full"
-                            type="email"
-                            name="email"
-                            :value="old('email')"
-                            placeholder="{{ __('Email') }}"
+                            type="text"
+                            name="id_user"
+                            :value="old('id_user')"
+                            placeholder="{{ __('ID USER') }}"
                             required
                             autofocus
                         />

@@ -25,6 +25,8 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    {{-- <link href="{{ asset('assets/css/main.css')}}" rel="stylesheet" /> --}}
 </head>
 
 <body class="font-sans antialiased">
@@ -66,6 +68,17 @@
                 <x-footer />
             </div>
         </div>
+        <!-- Preloader -->
+        {{-- <div id="preloader"></div> --}}
     </div>
+    
+    {{-- <script>
+        const preloader = document.querySelector("#preloader");
+        if (preloader) {
+            window.addEventListener("load", () => {
+                preloader.remove();
+            });
+        }
+    </script> --}}
 </body>
 </html>

@@ -16,6 +16,8 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name' => 'su-admin',
             'email' => 'su-admin@mail.com',
+            'partnerType' => 'su-admin',
+            'username' => 'su-admin',
             'password' => bcrypt('rahasia'),
         ]);
 
@@ -24,22 +26,38 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name' => 'admin',
             'email' => 'admin@mail.com',
+            'partnerType' => 'admin',
+            'username' => 'admin',
             'password' => bcrypt('rahasia'),
         ]);
 
         $user->assignRole('admin');
 
         $user = User::create([
-            'name' => 'mitra',
-            'email' => 'mitra@mail.com',
+            'name' => 'mitra pt',
+            'email' => 'mitra.pt@mail.com',
+            'partnerType' => 'mitra-pt',
+            'username' => 'mitra-pt',
             'password' => bcrypt('rahasia'),
         ]);
 
-        $user->assignRole('mitra');
+        $user->assignRole('mitra-pt');
+
+        $user = User::create([
+            'name' => 'mitra industri',
+            'email' => 'mitra.industri@mail.com',
+            'partnerType' => 'mitra-industri',
+            'username' => 'mitra-industri',
+            'password' => bcrypt('rahasia'),
+        ]);
+
+        $user->assignRole('mitra-industri');
 
         $user = User::create([
             'name' => 'kaprodi',
             'email' => 'kaprodi@mail.com',
+            'partnerType' => 'kaprodi',
+            'username' => 'kaprodi',
             'password' => bcrypt('rahasia'),
         ]);
 
@@ -48,6 +66,8 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name' => 'dospem',
             'email' => 'dospem@mail.com',
+            'partnerType' => 'dospem',
+            'username' => 'dospem',
             'password' => bcrypt('rahasia'),
         ]);
 
@@ -56,6 +76,8 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name' => 'mahasiswa',
             'email' => 'mahasiswa@mail.com',
+            'partnerType' => 'mahasiswa',
+            'username' => 'mahasiswa',
             'password' => bcrypt('rahasia'),
         ]);
 

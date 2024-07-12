@@ -17,11 +17,14 @@
         rel="stylesheet" />
 
     <!-- Styles -->
+    {{-- <link href="{{ asset('assets/css/main.css')}}" rel="stylesheet" /> --}}
+
     <style>
         [x-cloak] {
             display: none;
         }
     </style>
+    
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -62,5 +65,11 @@
             </x-button>
         </div>
     </div>
+
+    <!-- Preloader -->
+    {{-- <div id="preloader"></div> --}}
+
+    
+    {{-- <script src="{{ asset('assets/js/main.js')}}"></script> --}}
 </body>
 </html>

@@ -19,9 +19,11 @@
         x-show="isSidebarOpen || isSidebarHovered"
         class="text-sm text-gray-500"
     >
-        Kelola Akun Pengguna
+        Manage User Accounts
     </div>
 
+    @if (auth()->user()->hasRole('su-admin'))
+        
     <x-sidebar.link
         title="Administrator"
         :active="Str::startsWith(request()->route()->uri(), 'buttons')"
@@ -32,8 +34,12 @@
         </x-slot>
     </x-sidebar.link>
 
+    @endif
+
+    @if (auth()->user()->hasRole('admin'))
+    
     <x-sidebar.link
-        title="Mitra"
+        title="Partners"
         :active="Str::startsWith(request()->route()->uri(), 'buttons')"
         href="{{ url('/mitra') }}"
     >
@@ -41,9 +47,11 @@
             <x-icons.users-manage class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
         </x-slot>
     </x-sidebar.link>
+    @endif
 
+    @if (auth()->user()->hasRole('admin') || auth()->user()->hasRole('mitra-pt'))
     <x-sidebar.link
-        title="Mahasiswa"
+        title="Students"
         :active="Str::startsWith(request()->route()->uri(), 'buttons')"
         href="{{ url('/mahasiswa') }}"
     >
@@ -51,9 +59,11 @@
             <x-icons.users-manage class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
         </x-slot>
     </x-sidebar.link>
+    @endif
 
+    @if (auth()->user()->hasRole('admin'))
     <x-sidebar.link
-        title="Kaprodi"
+        title="Head of Study Program"
         :active="Str::startsWith(request()->route()->uri(), 'buttons')"
         href="{{ url('/kaprodi') }}"
     >
@@ -62,8 +72,12 @@
         </x-slot>
     </x-sidebar.link>
 
+    @endif
+
+    @if (auth()->user()->hasRole('kaprodi'))
+
     <x-sidebar.link
-        title="Dosen Pembimbing"
+        title="Academic Advisor"
         :active="Str::startsWith(request()->route()->uri(), 'buttons')"
         href="{{ url('/dospem') }}"
     >
@@ -71,6 +85,10 @@
             <x-icons.users-manage class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
         </x-slot>
     </x-sidebar.link>
+
+    @endif
+
+    @if (auth()->user()->hasRole('su-admin') || auth()->user()->hasRole('admin'))
 
     <div
         x-transition
@@ -80,6 +98,7 @@
         Kelola Sistem
     </div>
 
+    
     <x-sidebar.link
         title="Backup"
         :active="Str::startsWith(request()->route()->uri(), 'buttons')"
@@ -89,6 +108,8 @@
             <x-icons.copy class="flex-shrink-0 w-6 h-6" aria-hidden="true" />
         </x-slot>
     </x-sidebar.link>
+
+    @endif
     
     {{-- <x-sidebar.dropdown
         title="Buttons"
