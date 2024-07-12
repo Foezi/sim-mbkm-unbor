@@ -53,7 +53,7 @@ class RegisteredUserController extends Controller
         $partner->user_id = $user->id;
         $partner->save();
 
-        Log::info("registrasi akun ".$request->name);
+        // Log::info("registrasi akun ".$request->name);
 
         event(new Registered($user));
 
